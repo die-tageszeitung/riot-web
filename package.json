@@ -47,7 +47,7 @@
     "build:bundle-stats": "cross-env NODE_ENV=production webpack -p --progress --bail --mode production --json > webpack-stats.json",
     "build:electron": "yarn build && yarn install:electron && electron-builder -wml --ia32 --x64",
     "build:electron:linux": "yarn build && electron-builder -l --x64",
-    "build:electron:macos": "yarn build && electron-builder -m --x64",
+    "build:electron:macos": "yarn build && electron-builder -m tar.gz --x64",
     "build:electron:windows": "yarn build && electron-builder -w --ia32 --x64",
     "build:types": "tsc --emitDeclarationOnly --jsx react",
     "install:electron": "electron-builder install-app-deps",
@@ -155,7 +155,7 @@
   },
   "build": {
     "appId": "im.riot.app",
-    "electronVersion": "7.1.14",
+    "electronVersion": "8.2.2",
     "files": [
       "node_modules/**",
       "src/**"
