@@ -565,7 +565,7 @@ app.on('ready', () => {
     Menu.setApplicationMenu(vectorMenu);
 
     // Create trayIcon icon
-    if (store.get('minimizeToTray', true)) tray.create(trayConfig);
+    // if (store.get('minimizeToTray', true)) tray.create(trayConfig);
 
     mainWindow.once('ready-to-show', () => {
         mainWindowState.manage(mainWindow);
